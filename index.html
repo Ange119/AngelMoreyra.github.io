@@ -9,105 +9,19 @@
   <meta property="og:description" content="Ingeniería de datos, Azure Cloud y Big Data.">
   <title>Angel Moreyra | Data Engineer & Cloud Developer</title>
 
-  <script>
-    // Tailwind CDN configuration. Keep this before loading Tailwind.
-    tailwind = {
-      config: {
-        darkMode: 'class',
-        theme: {
-          extend: {
-            colors: {
-              darkBg: '#0f172a',
-              cardDark: '#1e293b',
-              accentBlue: '#3b82f6',
-              accentCyan: '#06b6d4'
-            }
-          }
-        }
-      }
-    };
-  </script>
+  <!-- Dependencias externas -->
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <style>
-    :root {
-      color-scheme: dark;
-      --page-bg: #020617;
-      --section-bg: rgba(15, 23, 42, .55);
-      --card-bg: rgba(30, 41, 59, .78);
-      --text-main: #f1f5f9;
-      --text-muted: #94a3b8;
-      --border-color: rgba(148, 163, 184, .16);
-    }
-
-    html.light {
-      color-scheme: light;
-      --page-bg: #f8fafc;
-      --section-bg: #f1f5f9;
-      --card-bg: rgba(255, 255, 255, .88);
-      --text-main: #0f172a;
-      --text-muted: #475569;
-      --border-color: rgba(15, 23, 42, .12);
-    }
-
-    body {
-      font-family: 'Inter', sans-serif;
-      background: var(--page-bg);
-      color: var(--text-main);
-      transition: background-color .25s ease, color .25s ease;
-    }
-
-    .section-alt { background: var(--section-bg); }
-    .glass-card {
-      background: var(--card-bg);
-      border: 1px solid var(--border-color);
-      backdrop-filter: blur(12px);
-    }
-
-    .muted { color: var(--text-muted); }
-    .theme-surface {
-      background: var(--card-bg);
-      border-color: var(--border-color);
-      color: var(--text-main);
-    }
-
-    .theme-text { color: var(--text-main); }
-    .theme-border { border-color: var(--border-color); }
-
-    .light .dark-only-surface {
-      background: #e2e8f0;
-      border-color: #cbd5e1;
-      color: #0f172a;
-    }
-
-    .light .dark-only-text { color: #334155; }
-    .light .nav-link { color: #334155; }
-    .light .nav-link:hover { color: #2563eb; }
-    .light .tag { background: #e2e8f0; color: #334155; }
-    .light .project-visual { background: #e2e8f0; border-color: #cbd5e1; }
-    .light .project-visual-inner { background: #f8fafc; }
-    .light .toast { background: #2563eb; color: white; }
-
-    a:focus-visible, button:focus-visible {
-      outline: 3px solid #38bdf8;
-      outline-offset: 3px;
-    }
-
-    @media (prefers-reduced-motion: reduce) {
-      *, *::before, *::after {
-        scroll-behavior: auto !important;
-        animation-duration: .01ms !important;
-        transition-duration: .01ms !important;
-      }
-    }
-  </style>
+  <!-- Estilos propios -->
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body class="min-h-screen flex flex-col">
+  <!-- Toast de notificaciones -->
   <div id="toast" role="status" aria-live="polite"
        class="toast fixed bottom-5 right-5 z-50 translate-y-20 opacity-0 transition-all duration-300 bg-blue-600 text-white px-6 py-3 rounded-xl shadow-2xl flex items-center gap-3">
     <i class="fa-solid fa-circle-check text-xl" aria-hidden="true"></i>
@@ -115,8 +29,7 @@
   </div>
 
   <!-- Navegación -->
-  <header id="navbar" class="sticky top-0 z-40 w-full backdrop-blur-md border-b theme-border"
-          style="background: color-mix(in srgb, var(--page-bg) 88%, transparent);">
+  <header id="navbar" class="site-header sticky top-0 z-40 w-full backdrop-blur-md border-b theme-border">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
       <a href="#inicio" class="flex items-center gap-3" aria-label="Ir al inicio">
         <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 to-cyan-400 flex items-center justify-center text-white font-bold text-lg shadow-lg">AM</div>
@@ -126,7 +39,7 @@
         </div>
       </a>
 
-      <nav class="hidden md:flex items-center gap-7 text-sm font-medium nav-link">
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium" aria-label="Navegación principal">
         <a class="nav-link transition-colors" href="#sobre-mi">Sobre mí</a>
         <a class="nav-link transition-colors" href="#stack">Tecnologías</a>
         <a class="nav-link transition-colors" href="#experiencia">Experiencia</a>
@@ -175,10 +88,15 @@
               <button id="copy-email" type="button" class="theme-surface border theme-border font-medium px-6 py-3.5 rounded-xl transition hover:opacity-80 flex items-center gap-2">
                 <i class="fa-regular fa-envelope" aria-hidden="true"></i> Copiar email
               </button>
+              <!-- TODO: cuando tengas tu CV en PDF, descomenta este botón y guarda el archivo en resources/
+              <a href="resources/CV_Angel_Moreyra.pdf" download class="theme-surface border theme-border font-medium px-6 py-3.5 rounded-xl transition hover:opacity-80 flex items-center gap-2">
+                <i class="fa-solid fa-download" aria-hidden="true"></i> Descargar CV
+              </a>
+              -->
             </div>
 
             <div class="flex items-center justify-center lg:justify-start gap-6 pt-3">
-              <!-- Sustituye estos enlaces por las URL reales de tus perfiles -->
+              <!-- TODO: sustituye estos enlaces por las URL reales de tus perfiles -->
               <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" class="muted hover:text-blue-500 text-xl transition">
                 <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
               </a>
@@ -194,7 +112,7 @@
           <div class="lg:col-span-5 flex justify-center">
             <div class="relative w-72 h-72 sm:w-80 sm:h-80 rounded-3xl p-2 bg-gradient-to-tr from-blue-600 to-cyan-400 shadow-2xl shadow-blue-500/20">
               <div class="w-full h-full rounded-[22px] overflow-hidden bg-slate-900">
-                <!-- FOTO: conserva esta ruta relativa y la estructura de carpetas indicada abajo -->
+                <!-- Estructura esperada: resources/foto_chompa_gris.jpeg -->
                 <img
                   src="resources/foto_chompa_gris.jpeg"
                   alt="Fotografía de Angel Moreyra"
@@ -243,34 +161,52 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <div class="glass-card p-6 rounded-2xl space-y-4">
-            <div class="w-12 h-12 rounded-xl bg-blue-600/10 text-blue-500 flex items-center justify-center text-xl"><i class="fa-solid fa-terminal"></i></div>
+            <div class="w-12 h-12 rounded-xl bg-blue-600/10 text-blue-500 flex items-center justify-center text-xl"><i class="fa-solid fa-terminal" aria-hidden="true"></i></div>
             <h3 class="font-bold text-lg">Lenguajes</h3>
             <div class="flex flex-wrap gap-2">
-              <span class="tag px-3 py-1 rounded-lg bg-slate-800 text-xs">Python</span><span class="tag px-3 py-1 rounded-lg bg-slate-800 text-xs">PySpark</span><span class="tag px-3 py-1 rounded-lg bg-slate-800 text-xs">SQL</span><span class="tag px-3 py-1 rounded-lg bg-slate-800 text-xs">Scala</span><span class="tag px-3 py-1 rounded-lg bg-slate-800 text-xs">JavaScript</span><span class="tag px-3 py-1 rounded-lg bg-slate-800 text-xs">Kotlin</span>
+              <span class="tag px-3 py-1 rounded-lg text-xs">Python</span>
+              <span class="tag px-3 py-1 rounded-lg text-xs">PySpark</span>
+              <span class="tag px-3 py-1 rounded-lg text-xs">SQL</span>
+              <span class="tag px-3 py-1 rounded-lg text-xs">Scala</span>
+              <span class="tag px-3 py-1 rounded-lg text-xs">JavaScript</span>
+              <span class="tag px-3 py-1 rounded-lg text-xs">Kotlin</span>
             </div>
           </div>
 
           <div class="glass-card p-6 rounded-2xl space-y-4">
-            <div class="w-12 h-12 rounded-xl bg-cyan-600/10 text-cyan-500 flex items-center justify-center text-xl"><i class="fa-solid fa-cloud"></i></div>
+            <div class="w-12 h-12 rounded-xl bg-cyan-600/10 text-cyan-500 flex items-center justify-center text-xl"><i class="fa-solid fa-cloud" aria-hidden="true"></i></div>
             <h3 class="font-bold text-lg">Cloud & Big Data</h3>
             <div class="flex flex-wrap gap-2">
-              <span class="tag px-3 py-1 rounded-lg bg-slate-800 text-xs">Azure Data Lake</span><span class="tag px-3 py-1 rounded-lg bg-slate-800 text-xs">Azure Data Factory</span><span class="tag px-3 py-1 rounded-lg bg-slate-800 text-xs">Azure Synapse</span><span class="tag px-3 py-1 rounded-lg bg-slate-800 text-xs">Azure Functions</span><span class="tag px-3 py-1 rounded-lg bg-slate-800 text-xs">Databricks</span>
+              <span class="tag px-3 py-1 rounded-lg text-xs">Azure Data Lake</span>
+              <span class="tag px-3 py-1 rounded-lg text-xs">Azure Data Factory</span>
+              <span class="tag px-3 py-1 rounded-lg text-xs">Azure Synapse</span>
+              <span class="tag px-3 py-1 rounded-lg text-xs">Azure Functions</span>
+              <span class="tag px-3 py-1 rounded-lg text-xs">Databricks</span>
             </div>
           </div>
 
           <div class="glass-card p-6 rounded-2xl space-y-4">
-            <div class="w-12 h-12 rounded-xl bg-emerald-600/10 text-emerald-500 flex items-center justify-center text-xl"><i class="fa-solid fa-database"></i></div>
+            <div class="w-12 h-12 rounded-xl bg-emerald-600/10 text-emerald-500 flex items-center justify-center text-xl"><i class="fa-solid fa-database" aria-hidden="true"></i></div>
             <h3 class="font-bold text-lg">Bases de datos</h3>
             <div class="flex flex-wrap gap-2">
-              <span class="tag px-3 py-1 rounded-lg bg-slate-800 text-xs">PostgreSQL</span><span class="tag px-3 py-1 rounded-lg bg-slate-800 text-xs">SQL Server</span><span class="tag px-3 py-1 rounded-lg bg-slate-800 text-xs">Oracle</span><span class="tag px-3 py-1 rounded-lg bg-slate-800 text-xs">MongoDB</span><span class="tag px-3 py-1 rounded-lg bg-slate-800 text-xs">Hive / Impala</span>
+              <span class="tag px-3 py-1 rounded-lg text-xs">PostgreSQL</span>
+              <span class="tag px-3 py-1 rounded-lg text-xs">SQL Server</span>
+              <span class="tag px-3 py-1 rounded-lg text-xs">Oracle</span>
+              <span class="tag px-3 py-1 rounded-lg text-xs">MongoDB</span>
+              <span class="tag px-3 py-1 rounded-lg text-xs">Hive / Impala</span>
             </div>
           </div>
 
           <div class="glass-card p-6 rounded-2xl space-y-4">
-            <div class="w-12 h-12 rounded-xl bg-purple-600/10 text-purple-500 flex items-center justify-center text-xl"><i class="fa-solid fa-code-branch"></i></div>
+            <div class="w-12 h-12 rounded-xl bg-purple-600/10 text-purple-500 flex items-center justify-center text-xl"><i class="fa-solid fa-code-branch" aria-hidden="true"></i></div>
             <h3 class="font-bold text-lg">Herramientas</h3>
             <div class="flex flex-wrap gap-2">
-              <span class="tag px-3 py-1 rounded-lg bg-slate-800 text-xs">Git</span><span class="tag px-3 py-1 rounded-lg bg-slate-800 text-xs">GitHub</span><span class="tag px-3 py-1 rounded-lg bg-slate-800 text-xs">Azure Boards</span><span class="tag px-3 py-1 rounded-lg bg-slate-800 text-xs">Docker</span><span class="tag px-3 py-1 rounded-lg bg-slate-800 text-xs">Power BI</span><span class="tag px-3 py-1 rounded-lg bg-slate-800 text-xs">dbt</span>
+              <span class="tag px-3 py-1 rounded-lg text-xs">Git</span>
+              <span class="tag px-3 py-1 rounded-lg text-xs">GitHub</span>
+              <span class="tag px-3 py-1 rounded-lg text-xs">Azure Boards</span>
+              <span class="tag px-3 py-1 rounded-lg text-xs">Docker</span>
+              <span class="tag px-3 py-1 rounded-lg text-xs">Power BI</span>
+              <span class="tag px-3 py-1 rounded-lg text-xs">dbt</span>
             </div>
           </div>
         </div>
@@ -287,25 +223,25 @@
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <article class="glass-card p-8 rounded-3xl space-y-4">
-            <div class="w-12 h-12 rounded-xl bg-blue-600/15 text-blue-500 flex items-center justify-center"><i class="fa-solid fa-shield-halved text-xl"></i></div>
+            <div class="w-12 h-12 rounded-xl bg-blue-600/15 text-blue-500 flex items-center justify-center"><i class="fa-solid fa-shield-halved text-xl" aria-hidden="true"></i></div>
             <h3 class="text-xl font-bold">Integración y seguridad de APIs</h3>
-            <p class="muted text-sm leading-relaxed">Trabajo con endpoints y mecanismos de autenticación mediante tokens para acceder de forma controlada a servicios y recursos protegidos. Adapta esta descripción a los mecanismos que hayas implementado realmente.</p>
+            <p class="muted text-sm leading-relaxed">Trabajo con endpoints y mecanismos de autenticación mediante tokens para acceder de forma controlada a servicios y recursos protegidos.</p>
           </article>
 
           <article class="glass-card p-8 rounded-3xl space-y-4">
-            <div class="w-12 h-12 rounded-xl bg-cyan-600/15 text-cyan-500 flex items-center justify-center"><i class="fa-solid fa-bolt text-xl"></i></div>
+            <div class="w-12 h-12 rounded-xl bg-cyan-600/15 text-cyan-500 flex items-center justify-center"><i class="fa-solid fa-bolt text-xl" aria-hidden="true"></i></div>
             <h3 class="text-xl font-bold">Procesamiento y optimización</h3>
             <p class="muted text-sm leading-relaxed">Transformación de datos con PySpark y SQL, optimización de consultas y reducción de operaciones costosas como joins y shuffles cuando el volumen de datos lo requiere.</p>
           </article>
 
           <article class="glass-card p-8 rounded-3xl space-y-4">
-            <div class="w-12 h-12 rounded-xl bg-emerald-600/15 text-emerald-500 flex items-center justify-center"><i class="fa-solid fa-layer-group text-xl"></i></div>
+            <div class="w-12 h-12 rounded-xl bg-emerald-600/15 text-emerald-500 flex items-center justify-center"><i class="fa-solid fa-layer-group text-xl" aria-hidden="true"></i></div>
             <h3 class="text-xl font-bold">Arquitectura Medallion</h3>
             <p class="muted text-sm leading-relaxed">Organización de procesos de ingesta y transformación en capas Bronze, Silver y Gold, separando los datos originales, los datos depurados y los datos preparados para consumo analítico.</p>
           </article>
 
           <article class="glass-card p-8 rounded-3xl space-y-4">
-            <div class="w-12 h-12 rounded-xl bg-purple-600/15 text-purple-500 flex items-center justify-center"><i class="fa-solid fa-gears text-xl"></i></div>
+            <div class="w-12 h-12 rounded-xl bg-purple-600/15 text-purple-500 flex items-center justify-center"><i class="fa-solid fa-gears text-xl" aria-hidden="true"></i></div>
             <h3 class="text-xl font-bold">Orquestación ETL/ELT</h3>
             <p class="muted text-sm leading-relaxed">Automatización de flujos de ingesta y transformación mediante Azure Data Factory y Azure Functions, integrando distintos orígenes y destinos de datos.</p>
           </article>
@@ -329,19 +265,23 @@
                 <h3 class="text-2xl font-bold">Motor de ingesta y procesamiento Cloud</h3>
                 <p class="muted leading-relaxed text-sm">Diseño e implementación de pipelines automatizados para la ingesta de diferentes fuentes de datos. Transformación y organización de la información mediante Azure Functions y procesos PySpark, con almacenamiento en formatos orientados al análisis.</p>
                 <div class="flex flex-wrap gap-2">
-                  <span class="tag px-2.5 py-1 rounded-md bg-slate-800 text-xs">Python</span><span class="tag px-2.5 py-1 rounded-md bg-slate-800 text-xs">PySpark</span><span class="tag px-2.5 py-1 rounded-md bg-slate-800 text-xs">Azure Data Factory</span><span class="tag px-2.5 py-1 rounded-md bg-slate-800 text-xs">Data Lake</span><span class="tag px-2.5 py-1 rounded-md bg-slate-800 text-xs">Synapse</span>
+                  <span class="tag px-2.5 py-1 rounded-md text-xs">Python</span>
+                  <span class="tag px-2.5 py-1 rounded-md text-xs">PySpark</span>
+                  <span class="tag px-2.5 py-1 rounded-md text-xs">Azure Data Factory</span>
+                  <span class="tag px-2.5 py-1 rounded-md text-xs">Data Lake</span>
+                  <span class="tag px-2.5 py-1 rounded-md text-xs">Synapse</span>
                 </div>
               </div>
               <div class="project-visual rounded-2xl p-6 border theme-border">
                 <div class="flex items-center justify-between text-xs muted border-b theme-border pb-3 mb-5">
-                  <span><i class="fa-solid fa-diagram-project text-blue-500 mr-2"></i>Flujo de procesamiento</span>
+                  <span><i class="fa-solid fa-diagram-project text-blue-500 mr-2" aria-hidden="true"></i>Flujo de procesamiento</span>
                   <span>Arquitectura de datos</span>
                 </div>
                 <div class="project-visual-inner rounded-xl p-4">
                   <div class="grid grid-cols-3 gap-2 text-center text-xs font-medium">
-                    <div class="dark-only-surface bg-slate-800 p-3 rounded-lg">Origen<br>CSV / BD</div>
+                    <div class="chip-block p-3 rounded-lg">Origen<br>CSV / BD</div>
                     <div class="bg-blue-600/20 border border-blue-500/30 p-3 rounded-lg text-blue-500">ADF<br>Functions</div>
-                    <div class="dark-only-surface bg-slate-800 p-3 rounded-lg">Data Lake<br>Parquet</div>
+                    <div class="chip-block p-3 rounded-lg">Data Lake<br>Parquet</div>
                   </div>
                   <p class="text-center text-xs muted mt-4">Ingesta → Bronze → Silver → Gold → Consumo analítico</p>
                 </div>
@@ -356,22 +296,25 @@
                 <h3 class="text-2xl font-bold">Sistema ERP y control de accesos</h3>
                 <p class="muted leading-relaxed text-sm">Análisis y desarrollo de módulos web y móviles para gestión de inventario, control de dispositivos y administración de accesos. Integración de interfaces de usuario con servicios y bases de datos.</p>
                 <div class="flex flex-wrap gap-2">
-                  <span class="tag px-2.5 py-1 rounded-md bg-slate-800 text-xs">React</span><span class="tag px-2.5 py-1 rounded-md bg-slate-800 text-xs">React Native</span><span class="tag px-2.5 py-1 rounded-md bg-slate-800 text-xs">Kotlin</span><span class="tag px-2.5 py-1 rounded-md bg-slate-800 text-xs">PostgreSQL</span>
+                  <span class="tag px-2.5 py-1 rounded-md text-xs">React</span>
+                  <span class="tag px-2.5 py-1 rounded-md text-xs">React Native</span>
+                  <span class="tag px-2.5 py-1 rounded-md text-xs">Kotlin</span>
+                  <span class="tag px-2.5 py-1 rounded-md text-xs">PostgreSQL</span>
                 </div>
               </div>
               <div class="project-visual rounded-2xl p-6 border theme-border">
                 <div class="flex items-center justify-between text-xs muted border-b theme-border pb-3 mb-5">
-                  <span><i class="fa-solid fa-mobile-screen text-emerald-500 mr-2"></i>Módulos web y móvil</span>
+                  <span><i class="fa-solid fa-mobile-screen text-emerald-500 mr-2" aria-hidden="true"></i>Módulos web y móvil</span>
                   <span>Full-stack</span>
                 </div>
-                <div class="project-visual-inner grid grid-cols-2 gap-3 text-center">
-                  <div class="dark-only-surface bg-slate-800 p-5 rounded-xl">
-                    <i class="fa-solid fa-laptop-code text-blue-500 text-2xl"></i>
+                <div class="project-visual-inner rounded-xl p-4 grid grid-cols-2 gap-3 text-center">
+                  <div class="chip-block p-5 rounded-xl">
+                    <i class="fa-solid fa-laptop-code text-blue-500 text-2xl" aria-hidden="true"></i>
                     <p class="font-bold text-sm mt-2">Panel ERP</p>
                     <p class="text-xs muted mt-1">Inventario y gestión</p>
                   </div>
-                  <div class="dark-only-surface bg-slate-800 p-5 rounded-xl">
-                    <i class="fa-solid fa-fingerprint text-emerald-500 text-2xl"></i>
+                  <div class="chip-block p-5 rounded-xl">
+                    <i class="fa-solid fa-fingerprint text-emerald-500 text-2xl" aria-hidden="true"></i>
                     <p class="font-bold text-sm mt-2">App móvil</p>
                     <p class="text-xs muted mt-1">Control de accesos</p>
                   </div>
@@ -392,6 +335,7 @@
           <a href="mailto:omoreyra34@gmail.com" class="w-full sm:w-auto bg-blue-600 hover:bg-blue-500 text-white font-medium px-8 py-3.5 rounded-xl transition flex items-center justify-center gap-2">
             <i class="fa-solid fa-paper-plane" aria-hidden="true"></i> omoreyra34@gmail.com
           </a>
+          <!-- TODO: sustituye por la URL real de tu LinkedIn -->
           <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto theme-surface border theme-border font-medium px-8 py-3.5 rounded-xl transition hover:opacity-80 flex items-center justify-center gap-2">
             <i class="fa-brands fa-linkedin text-blue-500" aria-hidden="true"></i> Perfil de LinkedIn
           </a>
@@ -407,60 +351,7 @@
     </div>
   </footer>
 
-  <script>
-    const EMAIL = 'omoreyra34@gmail.com';
-    const root = document.documentElement;
-    const themeButton = document.getElementById('theme-toggle');
-    const themeIcon = document.getElementById('theme-icon');
-    const toast = document.getElementById('toast');
-    const toastMessage = document.getElementById('toast-message');
-    let toastTimer;
-
-    function showToast(message) {
-      toastMessage.textContent = message;
-      toast.classList.remove('translate-y-20', 'opacity-0');
-      clearTimeout(toastTimer);
-      toastTimer = setTimeout(() => {
-        toast.classList.add('translate-y-20', 'opacity-0');
-      }, 2800);
-    }
-
-    function applyTheme(theme) {
-      const isLight = theme === 'light';
-      root.classList.toggle('light', isLight);
-      themeIcon.className = isLight ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
-      themeButton.setAttribute('aria-label', isLight ? 'Activar tema oscuro' : 'Activar tema claro');
-      try {
-        localStorage.setItem('theme', theme);
-      } catch (error) {
-        // La página sigue funcionando aunque el navegador bloquee localStorage.
-      }
-    }
-
-    themeButton.addEventListener('click', () => {
-      applyTheme(root.classList.contains('light') ? 'dark' : 'light');
-    });
-
-    document.getElementById('copy-email').addEventListener('click', async () => {
-      try {
-        if (!navigator.clipboard || !window.isSecureContext) {
-          throw new Error('Clipboard API no disponible en este contexto');
-        }
-        await navigator.clipboard.writeText(EMAIL);
-        showToast('¡Email copiado al portapapeles!');
-      } catch (error) {
-        showToast('No se pudo copiar. Usa: ' + EMAIL);
-      }
-    });
-
-    let savedTheme = 'dark';
-    try {
-      savedTheme = localStorage.getItem('theme') || 'dark';
-    } catch (error) {
-      // Se mantiene el tema oscuro por defecto.
-    }
-    applyTheme(savedTheme);
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
+  <!-- Lógica de la página -->
+  <script src="js/main.js"></script>
 </body>
 </html>

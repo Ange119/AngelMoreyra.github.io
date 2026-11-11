@@ -1,0 +1,115 @@
+/* ==========================================================================
+   Portfolio · Angel Moreyra
+   Hoja de estilos (complementa a Tailwind CDN)
+   ========================================================================== */
+ 
+/* ---------- Variables de tema ---------- */
+:root {
+  color-scheme: dark;
+  --page-bg: #020617;
+  --section-bg: rgba(15, 23, 42, 0.55);
+  --card-bg: rgba(30, 41, 59, 0.78);
+  --chip-bg: #1e293b;
+  --chip-text: #cbd5e1;
+  --text-main: #f1f5f9;
+  --text-muted: #94a3b8;
+  --border-color: rgba(148, 163, 184, 0.16);
+}
+ 
+html.light {
+  color-scheme: light;
+  --page-bg: #f8fafc;
+  --section-bg: #f1f5f9;
+  --card-bg: rgba(255, 255, 255, 0.88);
+  --chip-bg: #e2e8f0;
+  --chip-text: #334155;
+  --text-main: #0f172a;
+  --text-muted: #475569;
+  --border-color: rgba(15, 23, 42, 0.12);
+}
+ 
+/* ---------- Base ---------- */
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--page-bg);
+  color: var(--text-main);
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+ 
+/* ---------- Utilidades de tema ---------- */
+.muted { color: var(--text-muted); }
+.theme-text { color: var(--text-main); }
+.theme-border { border-color: var(--border-color); }
+ 
+.theme-surface {
+  background: var(--card-bg);
+  border-color: var(--border-color);
+  color: var(--text-main);
+}
+ 
+.section-alt { background: var(--section-bg); }
+ 
+/* ---------- Componentes ---------- */
+.site-header {
+  background: color-mix(in srgb, var(--page-bg) 88%, transparent);
+}
+ 
+.glass-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  backdrop-filter: blur(12px);
+}
+ 
+/* Etiquetas de tecnologías */
+.tag {
+  background: var(--chip-bg);
+  color: var(--chip-text);
+}
+ 
+/* Bloques del diagrama de cada proyecto */
+.chip-block {
+  background: var(--chip-bg);
+  color: var(--chip-text);
+}
+ 
+.project-visual {
+  background: rgba(15, 23, 42, 0.5);
+}
+ 
+.project-visual-inner {
+  background: rgba(2, 6, 23, 0.5);
+}
+ 
+html.light .project-visual {
+  background: #e2e8f0;
+  border-color: #cbd5e1;
+}
+ 
+html.light .project-visual-inner {
+  background: #f8fafc;
+}
+ 
+/* Enlaces de navegación */
+.nav-link { color: var(--text-muted); }
+.nav-link:hover { color: #3b82f6; }
+ 
+/* Toast */
+html.light .toast {
+  background: #2563eb;
+  color: #fff;
+}
+ 
+/* ---------- Accesibilidad ---------- */
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid #38bdf8;
+  outline-offset: 3px;
+}
+ 
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
