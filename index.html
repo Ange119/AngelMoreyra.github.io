@@ -26,13 +26,13 @@
   <div id="toast" role="status" aria-live="polite"
        class="toast fixed bottom-5 right-5 z-50 translate-y-20 opacity-0 transition-all duration-300 bg-blue-600 text-white px-6 py-3 rounded-xl shadow-2xl flex items-center gap-3">
     <i class="fa-solid fa-circle-check text-xl" aria-hidden="true"></i>
-    <span id="toast-message" class="font-medium text-sm">Acción realizada</span>
+    <span id="toast-message" class="font-medium text-sm" data-i18n="toast.default">Acción realizada</span>
   </div>
 
   <!-- Navegación -->
   <header id="navbar" class="site-header sticky top-0 z-40 w-full backdrop-blur-md border-b theme-border">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
-      <a href="#inicio" class="flex items-center gap-3" aria-label="Ir al inicio">
+      <a href="#inicio" class="flex items-center gap-3" aria-label="Ir al inicio" data-i18n-aria="a11y.home">
         <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 to-cyan-400 flex items-center justify-center text-white font-bold text-lg shadow-lg">AM</div>
         <div>
           <span class="font-bold text-lg tracking-tight block">Angel Moreyra</span>
@@ -40,21 +40,26 @@
         </div>
       </a>
 
-      <nav class="hidden md:flex items-center gap-7 text-sm font-medium" aria-label="Navegación principal">
-        <a class="nav-link transition-colors" href="#sobre-mi">Sobre mí</a>
-        <a class="nav-link transition-colors" href="#stack">Tecnologías</a>
-        <a class="nav-link transition-colors" href="#experiencia">Experiencia</a>
-        <a class="nav-link transition-colors" href="#proyectos">Proyectos</a>
-        <a class="nav-link transition-colors" href="#contacto">Contacto</a>
+      <nav class="hidden md:flex items-center gap-7 text-sm font-medium" aria-label="Navegación principal" data-i18n-aria="a11y.mainNav">
+        <a class="nav-link transition-colors" href="#sobre-mi" data-i18n="nav.about">Sobre mí</a>
+        <a class="nav-link transition-colors" href="#stack" data-i18n="nav.stack">Tecnologías</a>
+        <a class="nav-link transition-colors" href="#experiencia" data-i18n="nav.experience">Experiencia</a>
+        <a class="nav-link transition-colors" href="#proyectos" data-i18n="nav.projects">Proyectos</a>
+        <a class="nav-link transition-colors" href="#contacto" data-i18n="nav.contact">Contacto</a>
       </nav>
 
       <div class="flex items-center gap-3">
+        <button id="lang-toggle" type="button" aria-label="Cambiar a inglés" title="Cambiar a inglés"
+                class="h-10 px-3 rounded-xl border theme-border theme-surface flex items-center justify-center gap-2 hover:opacity-80 transition text-xs font-semibold tracking-wide">
+          <i class="fa-solid fa-globe" aria-hidden="true"></i>
+          <span id="lang-label">EN</span>
+        </button>
         <button id="theme-toggle" type="button" aria-label="Cambiar tema"
                 class="w-10 h-10 rounded-xl border theme-border theme-surface flex items-center justify-center hover:opacity-80 transition">
           <i class="fa-solid fa-moon" id="theme-icon" aria-hidden="true"></i>
         </button>
         <a href="#contacto" class="hidden sm:inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-white px-5 py-2.5 rounded-xl font-medium text-sm transition">
-          Contactar <i class="fa-solid fa-arrow-right text-xs" aria-hidden="true"></i>
+          <span data-i18n="header.contact">Contactar</span> <i class="fa-solid fa-arrow-right text-xs" aria-hidden="true"></i>
         </a>
       </div>
     </div>
@@ -69,7 +74,7 @@
           <div class="lg:col-span-7 space-y-7 text-center lg:text-left">
             <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-500 text-xs font-semibold uppercase tracking-wider">
               <span class="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
-              Disponible para nuevas oportunidades
+              <span data-i18n="hero.badge">Disponible para nuevas oportunidades</span>
             </div>
 
             <h1 class="text-4xl sm:text-6xl font-extrabold tracking-tight leading-tight">
@@ -77,20 +82,20 @@
               <span class="block bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent" style="height: 70px;">Azure Cloud & Big Data</span>
             </h1>
 
-            <p class="text-lg muted max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+            <p class="text-lg muted max-w-2xl mx-auto lg:mx-0 leading-relaxed" data-i18n="hero.lead">
               Diseño e implemento pipelines de datos y procesos ETL/ELT utilizando Python, PySpark, SQL y servicios de Azure.
               Me enfoco en construir soluciones escalables, automatizadas y eficientes para el procesamiento de datos.
             </p>
 
             <div class="flex flex-wrap items-center justify-center lg:justify-start gap-4 pt-2">
               <a href="#proyectos" class="bg-blue-600 hover:bg-blue-500 text-white font-medium px-7 py-3.5 rounded-xl transition flex items-center gap-2">
-                <i class="fa-solid fa-diagram-project" aria-hidden="true"></i> Ver proyectos
+                <i class="fa-solid fa-diagram-project" aria-hidden="true"></i> <span data-i18n="hero.projects">Ver proyectos</span>
               </a>
               <button id="copy-email" type="button" class="theme-surface border theme-border font-medium px-6 py-3.5 rounded-xl transition hover:opacity-80 flex items-center gap-2">
-                <i class="fa-regular fa-envelope" aria-hidden="true"></i> Copiar email
+                <i class="fa-regular fa-envelope" aria-hidden="true"></i> <span data-i18n="hero.copyEmail">Copiar email</span>
               </button>
               <a href="resources/CV_Angel_Moreyra.pdf" download class="theme-surface border theme-border font-medium px-6 py-3.5 rounded-xl transition hover:opacity-80 flex items-center gap-2">
-                <i class="fa-solid fa-download" aria-hidden="true"></i> Descargar CV
+                <i class="fa-solid fa-download" aria-hidden="true"></i> <span data-i18n="hero.downloadCv">Descargar CV</span>
               </a>
             </div>
 
@@ -101,7 +106,7 @@
               <a href="https://github.com/Ange119" target="_blank" rel="noopener noreferrer" aria-label="GitHub" class="muted hover:text-blue-500 text-xl transition">
                 <i class="fa-brands fa-github" aria-hidden="true"></i>
               </a>
-              <a href="mailto:omoreyra34@gmail.com" aria-label="Enviar email" class="muted hover:text-blue-500 text-xl transition">
+              <a href="mailto:omoreyra34@gmail.com" aria-label="Enviar email" data-i18n-aria="a11y.sendEmail" class="muted hover:text-blue-500 text-xl transition">
                 <i class="fa-solid fa-envelope" aria-hidden="true"></i>
               </a>
             </div>
@@ -114,6 +119,7 @@
                 <img
                   src="resources/foto_chompa_gris.jpeg"
                   alt="Fotografía de Angel Moreyra"
+                  data-i18n-alt="hero.photoAlt"
                   class="w-full h-full object-cover object-center"
                   onerror="this.onerror=null; this.src='https://placehold.co/400x400/1e293b/ffffff?text=Angel+Moreyra';"
                 >
@@ -123,7 +129,7 @@
                   <i class="fa-solid fa-cloud" aria-hidden="true"></i>
                 </div>
                 <div>
-                  <span class="text-xs muted block">Tecnologías principales</span>
+                  <span class="text-xs muted block" data-i18n="hero.mainTech">Tecnologías principales</span>
                   <span class="font-bold text-sm">Azure · PySpark · SQL</span>
                 </div>
               </div>
@@ -137,12 +143,12 @@
     <section id="sobre-mi" class="py-20 border-t theme-border section-alt">
       <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="max-w-3xl mx-auto text-center space-y-6">
-          <h2 class="text-3xl font-bold tracking-tight">Sobre mí</h2>
-          <p class="muted text-lg leading-relaxed">
+          <h2 class="text-3xl font-bold tracking-tight" data-i18n="about.title">Sobre mí</h2>
+          <p class="muted text-lg leading-relaxed" data-i18n="about.p1">
             Soy desarrollador especializado en ingeniería de datos, con formación como Técnico Superior en Desarrollo de Aplicaciones Multiplataforma y estudios universitarios en Ingeniería de Software.
             Cuento con experiencia en el desarrollo de procesos de ingesta, transformación y modelado de datos en entornos cloud.
           </p>
-          <p class="muted leading-relaxed">
+          <p class="muted leading-relaxed" data-i18n="about.p2">
             Me interesa la optimización de procesos, la calidad del dato y el diseño de arquitecturas que permitan transformar información en soluciones útiles para el negocio.
           </p>
         </div>
@@ -153,14 +159,14 @@
     <section id="stack" class="py-20 border-t theme-border">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-2xl mx-auto mb-14 space-y-3">
-          <h2 class="text-3xl font-bold tracking-tight">Stack tecnológico</h2>
-          <p class="muted">Tecnologías y herramientas utilizadas en proyectos de ingeniería de datos y desarrollo de software.</p>
+          <h2 class="text-3xl font-bold tracking-tight" data-i18n="stack.title">Stack tecnológico</h2>
+          <p class="muted" data-i18n="stack.lead">Tecnologías y herramientas utilizadas en proyectos de ingeniería de datos y desarrollo de software.</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           <div class="glass-card p-6 rounded-2xl space-y-4">
             <div class="w-12 h-12 rounded-xl bg-blue-600/10 text-blue-500 flex items-center justify-center text-xl"><i class="fa-solid fa-terminal" aria-hidden="true"></i></div>
-            <h3 class="font-bold text-lg">Lenguajes</h3>
+            <h3 class="font-bold text-lg" data-i18n="stack.languages">Lenguajes</h3>
             <div class="flex flex-wrap gap-2">
               <span class="tag px-3 py-1 rounded-lg text-xs">Python</span>
               <span class="tag px-3 py-1 rounded-lg text-xs">PySpark</span>
@@ -173,7 +179,7 @@
 
           <div class="glass-card p-6 rounded-2xl space-y-4">
             <div class="w-12 h-12 rounded-xl bg-cyan-600/10 text-cyan-500 flex items-center justify-center text-xl"><i class="fa-solid fa-cloud" aria-hidden="true"></i></div>
-            <h3 class="font-bold text-lg">Cloud & Big Data</h3>
+            <h3 class="font-bold text-lg" data-i18n="stack.cloud">Cloud & Big Data</h3>
             <div class="flex flex-wrap gap-2">
               <span class="tag px-3 py-1 rounded-lg text-xs">Azure Data Lake</span>
               <span class="tag px-3 py-1 rounded-lg text-xs">Azure Data Factory</span>
@@ -185,7 +191,7 @@
 
           <div class="glass-card p-6 rounded-2xl space-y-4">
             <div class="w-12 h-12 rounded-xl bg-emerald-600/10 text-emerald-500 flex items-center justify-center text-xl"><i class="fa-solid fa-database" aria-hidden="true"></i></div>
-            <h3 class="font-bold text-lg">Bases de datos</h3>
+            <h3 class="font-bold text-lg" data-i18n="stack.databases">Bases de datos</h3>
             <div class="flex flex-wrap gap-2">
               <span class="tag px-3 py-1 rounded-lg text-xs">PostgreSQL</span>
               <span class="tag px-3 py-1 rounded-lg text-xs">SQL Server</span>
@@ -197,7 +203,7 @@
 
           <div class="glass-card p-6 rounded-2xl space-y-4">
             <div class="w-12 h-12 rounded-xl bg-purple-600/10 text-purple-500 flex items-center justify-center text-xl"><i class="fa-solid fa-code-branch" aria-hidden="true"></i></div>
-            <h3 class="font-bold text-lg">Herramientas</h3>
+            <h3 class="font-bold text-lg" data-i18n="stack.tools">Herramientas</h3>
             <div class="flex flex-wrap gap-2">
               <span class="tag px-3 py-1 rounded-lg text-xs">Git</span>
               <span class="tag px-3 py-1 rounded-lg text-xs">GitHub</span>
@@ -215,33 +221,33 @@
     <section id="experiencia" class="py-20 border-t theme-border section-alt">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-2xl mx-auto mb-14 space-y-3">
-          <h2 class="text-3xl font-bold tracking-tight">Experiencia técnica</h2>
-          <p class="muted">Áreas en las que he trabajado y conocimientos aplicados en proyectos.</p>
+          <h2 class="text-3xl font-bold tracking-tight" data-i18n="experience.title">Experiencia técnica</h2>
+          <p class="muted" data-i18n="experience.lead">Áreas en las que he trabajado y conocimientos aplicados en proyectos.</p>
         </div>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
           <article class="glass-card p-8 rounded-3xl space-y-4">
             <div class="w-12 h-12 rounded-xl bg-emerald-600/15 text-emerald-500 flex items-center justify-center"><i class="fa-solid fa-layer-group text-xl" aria-hidden="true"></i></div>
-            <h3 class="text-xl font-bold">Arquitectura Medallion y modelado dimensional</h3>
-            <p class="muted text-sm leading-relaxed">Organización de la ingesta y transformación en capas Bronze, Silver y Gold, con modelos estrella y copo de nieve en la capa Gold para el consumo analítico.</p>
+            <h3 class="text-xl font-bold" data-i18n="experience.1.title">Arquitectura Medallion y modelado dimensional</h3>
+            <p class="muted text-sm leading-relaxed" data-i18n="experience.1.desc">Organización de la ingesta y transformación en capas Bronze, Silver y Gold, con modelos estrella y copo de nieve en la capa Gold para el consumo analítico.</p>
           </article>
 
           <article class="glass-card p-8 rounded-3xl space-y-4">
             <div class="w-12 h-12 rounded-xl bg-purple-600/15 text-purple-500 flex items-center justify-center"><i class="fa-solid fa-gears text-xl" aria-hidden="true"></i></div>
-            <h3 class="text-xl font-bold">Orquestación ETL/ELT</h3>
-            <p class="muted text-sm leading-relaxed">Automatización de flujos de ingesta y transformación con Azure Data Factory y Azure Functions, integrando orígenes CSV, JSON y bases de datos hacia el Data Lake.</p>
+            <h3 class="text-xl font-bold" data-i18n="experience.2.title">Orquestación ETL/ELT</h3>
+            <p class="muted text-sm leading-relaxed" data-i18n="experience.2.desc">Automatización de flujos de ingesta y transformación con Azure Data Factory y Azure Functions, integrando orígenes CSV, JSON y bases de datos hacia el Data Lake.</p>
           </article>
 
           <article class="glass-card p-8 rounded-3xl space-y-4">
             <div class="w-12 h-12 rounded-xl bg-cyan-600/15 text-cyan-500 flex items-center justify-center"><i class="fa-solid fa-bolt text-xl" aria-hidden="true"></i></div>
-            <h3 class="text-xl font-bold">Optimización de PySpark y SQL</h3>
-            <p class="muted text-sm leading-relaxed">Transformación de datos con PySpark y SQL, optimizando consultas y reduciendo operaciones costosas como joins y shuffles según el volumen de datos.</p>
+            <h3 class="text-xl font-bold" data-i18n="experience.3.title">Optimización de PySpark y SQL</h3>
+            <p class="muted text-sm leading-relaxed" data-i18n="experience.3.desc">Transformación de datos con PySpark y SQL, optimizando consultas y reduciendo operaciones costosas como joins y shuffles según el volumen de datos.</p>
           </article>
 
           <article class="glass-card p-8 rounded-3xl space-y-4">
             <div class="w-12 h-12 rounded-xl bg-blue-600/15 text-blue-500 flex items-center justify-center"><i class="fa-solid fa-code-branch text-xl" aria-hidden="true"></i></div>
-            <h3 class="text-xl font-bold">CI/CD y trabajo ágil</h3>
-            <p class="muted text-sm leading-relaxed">Control de versiones con Git, gestión del trabajo con Jira y Azure Boards, y aplicación de prácticas de integración y despliegue continuo.</p>
+            <h3 class="text-xl font-bold" data-i18n="experience.4.title">CI/CD y trabajo ágil</h3>
+            <p class="muted text-sm leading-relaxed" data-i18n="experience.4.desc">Control de versiones con Git, gestión del trabajo con Jira y Azure Boards, y aplicación de prácticas de integración y despliegue continuo.</p>
           </article>
         </div>
       </div>
@@ -251,29 +257,29 @@
     <section id="proyectos" class="py-20 border-t theme-border">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-center max-w-2xl mx-auto mb-14 space-y-3">
-          <h2 class="text-3xl font-bold tracking-tight">Proyectos destacados</h2>
-          <p class="muted">Una selección de proyectos de ingeniería de datos y desarrollo de software.</p>
+          <h2 class="text-3xl font-bold tracking-tight" data-i18n="projects.title">Proyectos destacados</h2>
+          <p class="muted" data-i18n="projects.lead">Una selección de proyectos de ingeniería de datos y desarrollo de software.</p>
         </div>
 
         <div class="space-y-8">
           <article class="glass-card rounded-3xl p-8 lg:p-10">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
               <div class="space-y-5">
-                <span class="inline-flex px-3 py-1 rounded-lg bg-blue-500/10 text-blue-500 text-xs font-semibold">Modernización de datos · Migración legacy</span>
-                <h3 class="text-2xl font-bold">Migración de gestión de existencias y caducidades</h3>
-                <p class="muted leading-relaxed text-sm">Migración de la lógica de negocio de gestión de existencias y caducidades desde paquetes PL/SQL en Oracle hacia el ecosistema de datos de Azure.</p>
+                <span class="inline-flex px-3 py-1 rounded-lg bg-blue-500/10 text-blue-500 text-xs font-semibold" data-i18n="project1.tag">Modernización de datos · Migración legacy</span>
+                <h3 class="text-2xl font-bold" data-i18n="project1.title">Migración de gestión de existencias y caducidades</h3>
+                <p class="muted leading-relaxed text-sm" data-i18n="project1.desc">Migración de la lógica de negocio de gestión de existencias y caducidades desde paquetes PL/SQL en Oracle hacia el ecosistema de datos de Azure.</p>
                 <ul class="space-y-2 text-sm muted">
                   <li class="flex gap-2">
                     <i class="fa-solid fa-check text-blue-500 mt-1 text-xs" aria-hidden="true"></i>
-                    <span>Análisis funcional y técnico de los paquetes PL/SQL para identificar la lógica de negocio y sus dependencias.</span>
+                    <span data-i18n="project1.b1">Análisis funcional y técnico de los paquetes PL/SQL para identificar la lógica de negocio y sus dependencias.</span>
                   </li>
                   <li class="flex gap-2">
                     <i class="fa-solid fa-check text-blue-500 mt-1 text-xs" aria-hidden="true"></i>
-                    <span>Rediseño y desarrollo de los procesos como notebooks PySpark en Azure Synapse y Databricks.</span>
+                    <span data-i18n="project1.b2">Rediseño y desarrollo de los procesos como notebooks PySpark en Azure Synapse y Databricks.</span>
                   </li>
                   <li class="flex gap-2">
                     <i class="fa-solid fa-check text-blue-500 mt-1 text-xs" aria-hidden="true"></i>
-                    <span>Persistencia de los resultados en Azure Data Lake para su explotación analítica.</span>
+                    <span data-i18n="project1.b3">Persistencia de los resultados en Azure Data Lake para su explotación analítica.</span>
                   </li>
                 </ul>
                 <div class="flex flex-wrap gap-2">
@@ -287,17 +293,17 @@
               </div>
               <div class="project-visual rounded-2xl p-6 border theme-border">
                 <div class="flex items-center justify-between text-xs muted border-b theme-border pb-3 mb-5">
-                  <span><i class="fa-solid fa-database text-blue-500 mr-2" aria-hidden="true"></i>Migración de lógica de negocio</span>
+                  <span><i class="fa-solid fa-database text-blue-500 mr-2" aria-hidden="true"></i><span data-i18n="project1.visual.title">Migración de lógica de negocio</span></span>
                   <span>Oracle → Azure</span>
                 </div>
                 <div class="project-visual-inner rounded-xl p-4">
                   <div class="grid grid-cols-2 gap-2 text-center text-xs font-medium">
                     <div class="chip-block p-3 rounded-lg">PL/SQL<br>Oracle</div>
-                    <div class="bg-blue-600/20 border border-blue-500/30 p-3 rounded-lg text-blue-500">Análisis de<br>dependencias</div>
+                    <div class="bg-blue-600/20 border border-blue-500/30 p-3 rounded-lg text-blue-500" data-i18n-html="project1.diagram.deps">Análisis de<br>dependencias</div>
                     <div class="bg-blue-600/20 border border-blue-500/30 p-3 rounded-lg text-blue-500">PySpark<br>Synapse / Databricks</div>
                     <div class="chip-block p-3 rounded-lg">Azure<br>Data Lake</div>
                   </div>
-                  <p class="text-center text-xs muted mt-4">Legacy → Rediseño → Procesamiento distribuido → Datos analíticos</p>
+                  <p class="text-center text-xs muted mt-4" data-i18n="project1.diagram.flow">Legacy → Rediseño → Procesamiento distribuido → Datos analíticos</p>
                 </div>
               </div>
             </div>
@@ -306,21 +312,21 @@
           <article class="glass-card rounded-3xl p-8 lg:p-10">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
               <div class="space-y-5">
-                <span class="inline-flex px-3 py-1 rounded-lg bg-blue-500/10 text-blue-500 text-xs font-semibold">Ingeniería de datos</span>
-                <h3 class="text-2xl font-bold">Motor de ingesta y procesamiento Cloud</h3>
-                <p class="muted leading-relaxed text-sm">Diseño e implementación de pipelines automatizados para la ingesta de diferentes fuentes de datos. Transformación y organización de la información mediante Azure Functions y procesos PySpark, con almacenamiento en formatos orientados al análisis.</p>
+                <span class="inline-flex px-3 py-1 rounded-lg bg-blue-500/10 text-blue-500 text-xs font-semibold" data-i18n="project2.tag">Ingeniería de datos</span>
+                <h3 class="text-2xl font-bold" data-i18n="project2.title">Motor de ingesta y procesamiento Cloud</h3>
+                <p class="muted leading-relaxed text-sm" data-i18n="project2.desc">Diseño e implementación de pipelines automatizados para la ingesta de diferentes fuentes de datos. Transformación y organización de la información mediante Azure Functions y procesos PySpark, con almacenamiento en formatos orientados al análisis.</p>
                 <ul class="space-y-2 text-sm muted">
                   <li class="flex gap-2">
                     <i class="fa-solid fa-check text-blue-500 mt-1 text-xs" aria-hidden="true"></i>
-                    <span>Ingesta automatizada desde distintas fuentes de datos, como CSV y bases de datos.</span>
+                    <span data-i18n="project2.b1">Ingesta automatizada desde distintas fuentes de datos, como CSV y bases de datos.</span>
                   </li>
                   <li class="flex gap-2">
                     <i class="fa-solid fa-check text-blue-500 mt-1 text-xs" aria-hidden="true"></i>
-                    <span>Transformación y organización de los datos con Azure Functions y PySpark.</span>
+                    <span data-i18n="project2.b2">Transformación y organización de los datos con Azure Functions y PySpark.</span>
                   </li>
                   <li class="flex gap-2">
                     <i class="fa-solid fa-check text-blue-500 mt-1 text-xs" aria-hidden="true"></i>
-                    <span>Almacenamiento en formatos orientados al análisis siguiendo la arquitectura Medallion.</span>
+                    <span data-i18n="project2.b3">Almacenamiento en formatos orientados al análisis siguiendo la arquitectura Medallion.</span>
                   </li>
                 </ul>
                 <div class="flex flex-wrap gap-2">
@@ -333,16 +339,16 @@
               </div>
               <div class="project-visual rounded-2xl p-6 border theme-border">
                 <div class="flex items-center justify-between text-xs muted border-b theme-border pb-3 mb-5">
-                  <span><i class="fa-solid fa-diagram-project text-blue-500 mr-2" aria-hidden="true"></i>Flujo de procesamiento</span>
-                  <span>Arquitectura de datos</span>
+                  <span><i class="fa-solid fa-diagram-project text-blue-500 mr-2" aria-hidden="true"></i><span data-i18n="project2.visual.title">Flujo de procesamiento</span></span>
+                  <span data-i18n="project2.visual.subtitle">Arquitectura de datos</span>
                 </div>
                 <div class="project-visual-inner rounded-xl p-4">
                   <div class="grid grid-cols-3 gap-2 text-center text-xs font-medium">
-                    <div class="chip-block p-3 rounded-lg">Origen<br>CSV / BD</div>
+                    <div class="chip-block p-3 rounded-lg" data-i18n-html="project2.diagram.source">Origen<br>CSV / BD</div>
                     <div class="bg-blue-600/20 border border-blue-500/30 p-3 rounded-lg text-blue-500">ADF<br>Functions</div>
                     <div class="chip-block p-3 rounded-lg">Data Lake<br>Parquet</div>
                   </div>
-                  <p class="text-center text-xs muted mt-4">Ingesta → Bronze → Silver → Gold → Consumo analítico</p>
+                  <p class="text-center text-xs muted mt-4" data-i18n="project2.diagram.flow">Ingesta → Bronze → Silver → Gold → Consumo analítico</p>
                 </div>
               </div>
             </div>
@@ -352,10 +358,10 @@
             <article class="glass-card rounded-3xl p-8 space-y-4">
               <div class="flex items-center gap-3">
                 <div class="w-10 h-10 rounded-xl bg-cyan-600/15 text-cyan-500 flex items-center justify-center"><i class="fa-solid fa-bolt" aria-hidden="true"></i></div>
-                <span class="text-xs font-semibold uppercase tracking-wider muted">Procesamiento y orquestación</span>
+                <span class="text-xs font-semibold uppercase tracking-wider muted" data-i18n="project3.kicker">Procesamiento y orquestación</span>
               </div>
-              <h3 class="text-xl font-bold">Motor de cálculo de facturación eléctrica</h3>
-              <p class="muted text-sm leading-relaxed">Modificación de los procesos de cálculo de facturación eléctrica con Azure Functions (Scala y Python) y orquestación mediante pipelines de Azure Data Factory, con validación de datos en Hive e Impala.</p>
+              <h3 class="text-xl font-bold" data-i18n="project3.title">Motor de cálculo de facturación eléctrica</h3>
+              <p class="muted text-sm leading-relaxed" data-i18n="project3.desc">Modificación de los procesos de cálculo de facturación eléctrica con Azure Functions (Scala y Python) y orquestación mediante pipelines de Azure Data Factory, con validación de datos en Hive e Impala.</p>
               <div class="flex flex-wrap gap-2">
                 <span class="tag px-2.5 py-1 rounded-md text-xs">Azure Functions</span>
                 <span class="tag px-2.5 py-1 rounded-md text-xs">Scala</span>
@@ -369,10 +375,10 @@
             <article class="glass-card rounded-3xl p-8 space-y-4">
               <div class="flex items-center gap-3">
                 <div class="w-10 h-10 rounded-xl bg-emerald-600/15 text-emerald-500 flex items-center justify-center"><i class="fa-solid fa-laptop-code" aria-hidden="true"></i></div>
-                <span class="text-xs font-semibold uppercase tracking-wider muted">Desarrollo de software</span>
+                <span class="text-xs font-semibold uppercase tracking-wider muted" data-i18n="project4.kicker">Desarrollo de software</span>
               </div>
-              <h3 class="text-xl font-bold">Sistema ERP y control de accesos</h3>
-              <p class="muted text-sm leading-relaxed">Módulos web y móviles para gestión de inventario, control de dispositivos y administración de accesos, integrando interfaces de usuario con servicios y bases de datos.</p>
+              <h3 class="text-xl font-bold" data-i18n="project4.title">Sistema ERP y control de accesos</h3>
+              <p class="muted text-sm leading-relaxed" data-i18n="project4.desc">Módulos web y móviles para gestión de inventario, control de dispositivos y administración de accesos, integrando interfaces de usuario con servicios y bases de datos.</p>
               <div class="flex flex-wrap gap-2">
                 <span class="tag px-2.5 py-1 rounded-md text-xs">React</span>
                 <span class="tag px-2.5 py-1 rounded-md text-xs">React Native</span>
@@ -388,17 +394,17 @@
     <!-- Contacto -->
     <section id="contacto" class="py-20 border-t theme-border section-alt">
       <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6">
-        <h2 class="text-3xl font-bold tracking-tight">¿Hablamos?</h2>
-        <p class="muted text-base">Estoy abierto a nuevas oportunidades en ingeniería de datos. Puedes contactar conmigo por email o LinkedIn.</p>
+        <h2 class="text-3xl font-bold tracking-tight" data-i18n="contact.title">¿Hablamos?</h2>
+        <p class="muted text-base" data-i18n="contact.lead">Estoy abierto a nuevas oportunidades en ingeniería de datos. Puedes contactar conmigo por email o LinkedIn.</p>
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-3">
           <a href="mailto:omoreyra34@gmail.com" class="w-full sm:w-auto bg-blue-600 hover:bg-blue-500 text-white font-medium px-8 py-3.5 rounded-xl transition flex items-center justify-center gap-2">
             <i class="fa-solid fa-paper-plane" aria-hidden="true"></i> omoreyra34@gmail.com
           </a>
           <a href="https://www.linkedin.com/in/angel-moreyra-mendoza-a550a7274/" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto theme-surface border theme-border font-medium px-8 py-3.5 rounded-xl transition hover:opacity-80 flex items-center justify-center gap-2">
-            <i class="fa-brands fa-linkedin text-blue-500" aria-hidden="true"></i> Perfil de LinkedIn
+            <i class="fa-brands fa-linkedin text-blue-500" aria-hidden="true"></i> <span data-i18n="contact.linkedin">Perfil de LinkedIn</span>
           </a>
           <a href="resources/CV_Angel_Moreyra.pdf" download class="w-full sm:w-auto theme-surface border theme-border font-medium px-8 py-3.5 rounded-xl transition hover:opacity-80 flex items-center justify-center gap-2">
-            <i class="fa-solid fa-download" aria-hidden="true"></i> Descargar CV
+            <i class="fa-solid fa-download" aria-hidden="true"></i> <span data-i18n="contact.downloadCv">Descargar CV</span>
           </a>
         </div>
       </div>
@@ -407,12 +413,13 @@
 
   <footer class="border-t theme-border py-8 text-center text-xs muted">
     <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row items-center justify-between gap-3">
-      <span>© <span id="year">2026</span> Angel Moreyra. Todos los derechos reservados.</span>
-      <span>Data Engineer · Madrid, España</span>
+      <span>© <span id="year">2026</span> <span data-i18n="footer.rights">Angel Moreyra. Todos los derechos reservados.</span></span>
+      <span data-i18n="footer.location">Data Engineer · Madrid, España</span>
     </div>
   </footer>
 
   <!-- Lógica de la página -->
+  <script src="src/scripts/i18n.js"></script>
   <script src="src/scripts/main.js"></script>
 </body>
 </html>

@@ -25,14 +25,19 @@
   }
  
   /* ---------- Tema ---------- */
+  function updateThemeLabel() {
+    const isLight = root.classList.contains('light');
+    themeButton.setAttribute(
+      'aria-label',
+      window.i18n.t(isLight ? 'a11y.themeDark' : 'a11y.themeLight')
+    );
+  }
+
   function applyTheme(theme) {
     const isLight = theme === 'light';
     root.classList.toggle('light', isLight);
     themeIcon.className = isLight ? 'fa-solid fa-sun' : 'fa-solid fa-moon';
-    themeButton.setAttribute(
-      'aria-label',
-      isLight ? 'Activar tema oscuro' : 'Activar tema claro'
-    );
+    updateThemeLabel();
     try {
       localStorage.setItem(THEME_KEY, theme);
     } catch (error) {
@@ -59,11 +64,14 @@
         throw new Error('Clipboard API no disponible en este contexto');
       }
       await navigator.clipboard.writeText(EMAIL);
-      showToast('¡Email copiado al portapapeles!');
+      showToast(window.i18n.t('toast.emailCopied'));
     } catch (error) {
-      showToast('No se pudo copiar. Usa: ' + EMAIL);
+      showToast(window.i18n.t('toast.copyError', { email: EMAIL }));
     }
   });
+ 
+  /* ---------- Idioma ---------- */
+  document.addEventListener('languagechange', updateThemeLabel);
  
   /* ---------- Inicialización ---------- */
   applyTheme(getSavedTheme());
