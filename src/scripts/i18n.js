@@ -35,7 +35,6 @@
       'hero.lead': 'Diseño e implemento pipelines de datos y procesos ETL/ELT utilizando Python, PySpark, SQL y servicios de Azure. Me enfoco en construir soluciones escalables, automatizadas y eficientes para el procesamiento de datos.',
       'hero.projects': 'Ver proyectos',
       'hero.copyEmail': 'Copiar email',
-      'hero.downloadCv': 'Descargar CV',
       'hero.photoAlt': 'Fotografía de Angel Moreyra',
       'hero.mainTech': 'Tecnologías principales',
 
@@ -96,7 +95,6 @@
       'contact.title': '¿Hablamos?',
       'contact.lead': 'Estoy abierto a nuevas oportunidades en ingeniería de datos. Puedes contactar conmigo por email o LinkedIn.',
       'contact.linkedin': 'Perfil de LinkedIn',
-      'contact.downloadCv': 'Descargar CV',
 
       'footer.rights': 'Angel Moreyra. Todos los derechos reservados.',
       'footer.location': 'Data Engineer · Madrid, España',
@@ -130,7 +128,6 @@
       'hero.lead': 'I design and implement data pipelines and ETL/ELT processes using Python, PySpark, SQL and Azure services. I focus on building scalable, automated and efficient solutions for data processing.',
       'hero.projects': 'View projects',
       'hero.copyEmail': 'Copy email',
-      'hero.downloadCv': 'Download CV',
       'hero.photoAlt': 'Photograph of Angel Moreyra',
       'hero.mainTech': 'Core technologies',
 
@@ -191,7 +188,6 @@
       'contact.title': "Let's talk",
       'contact.lead': 'I am open to new opportunities in data engineering. You can contact me by email or LinkedIn.',
       'contact.linkedin': 'LinkedIn profile',
-      'contact.downloadCv': 'Download CV',
 
       'footer.rights': 'Angel Moreyra. All rights reserved.',
       'footer.location': 'Data Engineer · Madrid, Spain',
