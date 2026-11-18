@@ -160,7 +160,7 @@
           <p class="muted" data-i18n="stack.lead">Tecnologías y herramientas utilizadas en proyectos de ingeniería de datos y desarrollo de software.</p>
         </div>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
           <div class="glass-card p-6 rounded-2xl space-y-4">
             <div class="w-12 h-12 rounded-xl bg-blue-600/10 text-blue-500 flex items-center justify-center text-xl"><i class="fa-solid fa-terminal" aria-hidden="true"></i></div>
             <h3 class="font-bold text-lg" data-i18n="stack.languages">Lenguajes</h3>
@@ -199,15 +199,31 @@
           </div>
 
           <div class="glass-card p-6 rounded-2xl space-y-4">
+            <div class="w-12 h-12 rounded-xl bg-rose-600/10 text-rose-500 flex items-center justify-center text-xl"><i class="fa-solid fa-brain" aria-hidden="true"></i></div>
+            <h3 class="font-bold text-lg" data-i18n="stack.ai">IA & RAG</h3>
+            <div class="flex flex-wrap gap-2">
+              <span class="tag px-3 py-1 rounded-lg text-xs">pgvector</span>
+              <span class="tag px-3 py-1 rounded-lg text-xs">LangChain</span>
+              <span class="tag px-3 py-1 rounded-lg text-xs">FastAPI</span>
+              <span class="tag px-3 py-1 rounded-lg text-xs">RAG</span>
+              <span class="tag px-3 py-1 rounded-lg text-xs">LLMs</span>
+              <span class="tag px-3 py-1 rounded-lg text-xs">Embeddings</span>
+              <span class="tag px-3 py-1 rounded-lg text-xs">Text-to-SQL</span>
+            </div>
+          </div>
+
+          <div class="glass-card p-6 rounded-2xl space-y-4">
             <div class="w-12 h-12 rounded-xl bg-purple-600/10 text-purple-500 flex items-center justify-center text-xl"><i class="fa-solid fa-code-branch" aria-hidden="true"></i></div>
             <h3 class="font-bold text-lg" data-i18n="stack.tools">Herramientas</h3>
             <div class="flex flex-wrap gap-2">
               <span class="tag px-3 py-1 rounded-lg text-xs">Git</span>
               <span class="tag px-3 py-1 rounded-lg text-xs">GitHub</span>
+              <span class="tag px-3 py-1 rounded-lg text-xs">Jira</span>
               <span class="tag px-3 py-1 rounded-lg text-xs">Azure Boards</span>
               <span class="tag px-3 py-1 rounded-lg text-xs">Docker</span>
               <span class="tag px-3 py-1 rounded-lg text-xs">Power BI</span>
               <span class="tag px-3 py-1 rounded-lg text-xs">dbt</span>
+              <span class="tag px-3 py-1 rounded-lg text-xs">Apache Hue</span>
             </div>
           </div>
         </div>
@@ -226,7 +242,7 @@
           <article class="glass-card p-8 rounded-3xl space-y-4">
             <div class="w-12 h-12 rounded-xl bg-emerald-600/15 text-emerald-500 flex items-center justify-center"><i class="fa-solid fa-layer-group text-xl" aria-hidden="true"></i></div>
             <h3 class="text-xl font-bold" data-i18n="experience.1.title">Arquitectura Medallion y modelado dimensional</h3>
-            <p class="muted text-sm leading-relaxed" data-i18n="experience.1.desc">Organización de la ingesta y transformación en capas Bronze, Silver y Gold, con modelos estrella y copo de nieve en la capa Gold para el consumo analítico.</p>
+            <p class="muted text-sm leading-relaxed" data-i18n="experience.1.desc">Organización de la ingesta y transformación en capas Bronze, Silver y Gold, con datos en formato Parquet, tablas externas y vistas en Azure Synapse, y modelos en estrella y copo de nieve en la capa Gold para consumo analítico.</p>
           </article>
 
           <article class="glass-card p-8 rounded-3xl space-y-4">
@@ -242,9 +258,9 @@
           </article>
 
           <article class="glass-card p-8 rounded-3xl space-y-4">
-            <div class="w-12 h-12 rounded-xl bg-blue-600/15 text-blue-500 flex items-center justify-center"><i class="fa-solid fa-code-branch text-xl" aria-hidden="true"></i></div>
-            <h3 class="text-xl font-bold" data-i18n="experience.4.title">CI/CD y trabajo ágil</h3>
-            <p class="muted text-sm leading-relaxed" data-i18n="experience.4.desc">Control de versiones con Git, gestión del trabajo con Jira y Azure Boards, y aplicación de prácticas de integración y despliegue continuo.</p>
+            <div class="w-12 h-12 rounded-xl bg-rose-600/15 text-rose-500 flex items-center justify-center"><i class="fa-solid fa-brain text-xl" aria-hidden="true"></i></div>
+            <h3 class="text-xl font-bold" data-i18n="experience.4.title">IA aplicada: RAG y Text-to-SQL</h3>
+            <p class="muted text-sm leading-relaxed" data-i18n="experience.4.desc">Desarrollo de pipelines de búsqueda semántica con PostgreSQL (pgvector) y flujos RAG con LangChain y FastAPI, además de habilitar consultas Text-to-SQL sobre vistas analíticas en Azure Synapse mediante metadatos y reglas de seguridad.</p>
           </article>
         </div>
       </div>
@@ -262,45 +278,45 @@
           <article class="glass-card rounded-3xl p-8 lg:p-10">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
               <div class="space-y-5">
-                <span class="inline-flex px-3 py-1 rounded-lg bg-blue-500/10 text-blue-500 text-xs font-semibold" data-i18n="project1.tag">Modernización de datos · Migración legacy</span>
-                <h3 class="text-2xl font-bold" data-i18n="project1.title">Migración de gestión de existencias y caducidades</h3>
-                <p class="muted leading-relaxed text-sm" data-i18n="project1.desc">Migración de la lógica de negocio de gestión de existencias y caducidades desde paquetes PL/SQL en Oracle hacia el ecosistema de datos de Azure.</p>
+                <span class="inline-flex px-3 py-1 rounded-lg bg-blue-500/10 text-blue-500 text-xs font-semibold" data-i18n="project1.tag">Ingeniería de datos · Azure</span>
+                <h3 class="text-2xl font-bold" data-i18n="project1.title">Motor de ingesta con Azure Data Factory</h3>
+                <p class="muted leading-relaxed text-sm" data-i18n="project1.desc">Diseño e implementación de pipelines de ingesta de datos con Azure Data Factory (ADF), automatizando la carga de fuentes CSV, JSON, bases de datos y otros orígenes hacia Azure Data Lake. Desarrollo de Azure Functions en Python y notebooks PySpark para transformaciones, con procesamiento y limpieza de datos en las capas Silver y Gold en formato Parquet.</p>
                 <ul class="space-y-2 text-sm muted">
                   <li class="flex gap-2">
                     <i class="fa-solid fa-check text-blue-500 mt-1 text-xs" aria-hidden="true"></i>
-                    <span data-i18n="project1.b1">Análisis funcional y técnico de los paquetes PL/SQL para identificar la lógica de negocio y sus dependencias.</span>
+                    <span data-i18n="project1.b1">Ingesta automatizada de fuentes CSV, JSON, bases de datos y otros orígenes hacia Azure Data Lake mediante ADF.</span>
                   </li>
                   <li class="flex gap-2">
                     <i class="fa-solid fa-check text-blue-500 mt-1 text-xs" aria-hidden="true"></i>
-                    <span data-i18n="project1.b2">Rediseño y desarrollo de los procesos como notebooks PySpark en Azure Synapse y Databricks.</span>
+                    <span data-i18n="project1.b2">Transformación, procesamiento y limpieza de datos en capas Silver y Gold con Azure Functions (Python) y notebooks PySpark, almacenando en Parquet.</span>
                   </li>
                   <li class="flex gap-2">
                     <i class="fa-solid fa-check text-blue-500 mt-1 text-xs" aria-hidden="true"></i>
-                    <span data-i18n="project1.b3">Persistencia de los resultados en Azure Data Lake para su explotación analítica.</span>
+                    <span data-i18n="project1.b3">Creación de tablas externas y vistas en Azure Synapse y diseño de esquemas en estrella y copo de nieve en la capa Gold para consultas eficientes.</span>
                   </li>
                 </ul>
                 <div class="flex flex-wrap gap-2">
-                  <span class="tag px-2.5 py-1 rounded-md text-xs">PL/SQL</span>
-                  <span class="tag px-2.5 py-1 rounded-md text-xs">Oracle</span>
+                  <span class="tag px-2.5 py-1 rounded-md text-xs">Python</span>
                   <span class="tag px-2.5 py-1 rounded-md text-xs">PySpark</span>
+                  <span class="tag px-2.5 py-1 rounded-md text-xs">Azure Data Factory</span>
+                  <span class="tag px-2.5 py-1 rounded-md text-xs">Azure Functions</span>
                   <span class="tag px-2.5 py-1 rounded-md text-xs">Azure Synapse</span>
-                  <span class="tag px-2.5 py-1 rounded-md text-xs">Databricks</span>
-                  <span class="tag px-2.5 py-1 rounded-md text-xs">Data Lake</span>
+                  <span class="tag px-2.5 py-1 rounded-md text-xs">Azure Data Lake</span>
+                  <span class="tag px-2.5 py-1 rounded-md text-xs">Parquet</span>
                 </div>
               </div>
               <div class="project-visual rounded-2xl p-6 border theme-border">
                 <div class="flex items-center justify-between text-xs muted border-b theme-border pb-3 mb-5">
-                  <span><i class="fa-solid fa-database text-blue-500 mr-2" aria-hidden="true"></i><span data-i18n="project1.visual.title">Migración de lógica de negocio</span></span>
-                  <span>Oracle → Azure</span>
+                  <span><i class="fa-solid fa-diagram-project text-blue-500 mr-2" aria-hidden="true"></i><span data-i18n="project1.visual.title">Flujo de ingesta y procesamiento</span></span>
+                  <span data-i18n="project1.visual.subtitle">Arquitectura Medallion en Azure</span>
                 </div>
                 <div class="project-visual-inner rounded-xl p-4">
-                  <div class="grid grid-cols-2 gap-2 text-center text-xs font-medium">
-                    <div class="chip-block p-3 rounded-lg">PL/SQL<br>Oracle</div>
-                    <div class="bg-blue-600/20 border border-blue-500/30 p-3 rounded-lg text-blue-500" data-i18n-html="project1.diagram.deps">Análisis de<br>dependencias</div>
-                    <div class="bg-blue-600/20 border border-blue-500/30 p-3 rounded-lg text-blue-500">PySpark<br>Synapse / Databricks</div>
-                    <div class="chip-block p-3 rounded-lg">Azure<br>Data Lake</div>
+                  <div class="grid grid-cols-3 gap-2 text-center text-xs font-medium">
+                    <div class="chip-block p-3 rounded-lg" data-i18n-html="project1.diagram.source">Origen<br>CSV / JSON / BD</div>
+                    <div class="bg-blue-600/20 border border-blue-500/30 p-3 rounded-lg text-blue-500">ADF<br>Functions</div>
+                    <div class="chip-block p-3 rounded-lg">Data Lake<br>Parquet</div>
                   </div>
-                  <p class="text-center text-xs muted mt-4" data-i18n="project1.diagram.flow">Legacy → Rediseño → Procesamiento distribuido → Datos analíticos</p>
+                  <p class="text-center text-xs muted mt-4" data-i18n="project1.diagram.flow">ADF → Bronze → Silver/Gold (Parquet) → Synapse (tablas y vistas)</p>
                 </div>
               </div>
             </div>
@@ -309,43 +325,46 @@
           <article class="glass-card rounded-3xl p-8 lg:p-10">
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
               <div class="space-y-5">
-                <span class="inline-flex px-3 py-1 rounded-lg bg-blue-500/10 text-blue-500 text-xs font-semibold" data-i18n="project2.tag">Ingeniería de datos</span>
-                <h3 class="text-2xl font-bold" data-i18n="project2.title">Motor de ingesta y procesamiento Cloud</h3>
-                <p class="muted leading-relaxed text-sm" data-i18n="project2.desc">Diseño e implementación de pipelines automatizados para la ingesta de diferentes fuentes de datos. Transformación y organización de la información mediante Azure Functions y procesos PySpark, con almacenamiento en formatos orientados al análisis.</p>
+                <span class="inline-flex px-3 py-1 rounded-lg bg-rose-500/10 text-rose-500 text-xs font-semibold" data-i18n="project2.tag">IA aplicada · RAG & Text-to-SQL</span>
+                <h3 class="text-2xl font-bold" data-i18n="project2.title">Vector RAG y Text-to-SQL (MVP)</h3>
+                <p class="muted leading-relaxed text-sm" data-i18n="project2.desc">MVP de IA aplicada que combina búsqueda semántica (RAG) y consultas en lenguaje natural sobre datos analíticos del sector energético.</p>
                 <ul class="space-y-2 text-sm muted">
                   <li class="flex gap-2">
-                    <i class="fa-solid fa-check text-blue-500 mt-1 text-xs" aria-hidden="true"></i>
-                    <span data-i18n="project2.b1">Ingesta automatizada desde distintas fuentes de datos, como CSV y bases de datos.</span>
+                    <i class="fa-solid fa-check text-rose-500 mt-1 text-xs" aria-hidden="true"></i>
+                    <span data-i18n="project2.b1">Pipelines en Python para procesar normativas y contratos energéticos, con almacenamiento y búsqueda vectorial en PostgreSQL (pgvector).</span>
                   </li>
                   <li class="flex gap-2">
-                    <i class="fa-solid fa-check text-blue-500 mt-1 text-xs" aria-hidden="true"></i>
-                    <span data-i18n="project2.b2">Transformación y organización de los datos con Azure Functions y PySpark.</span>
+                    <i class="fa-solid fa-check text-rose-500 mt-1 text-xs" aria-hidden="true"></i>
+                    <span data-i18n="project2.b2">Vistas analíticas en Azure Synapse y definición de metadatos y reglas de seguridad para habilitar consultas Text-to-SQL sobre consumo y facturación.</span>
                   </li>
                   <li class="flex gap-2">
-                    <i class="fa-solid fa-check text-blue-500 mt-1 text-xs" aria-hidden="true"></i>
-                    <span data-i18n="project2.b3">Almacenamiento en formatos orientados al análisis siguiendo la arquitectura Medallion.</span>
+                    <i class="fa-solid fa-check text-rose-500 mt-1 text-xs" aria-hidden="true"></i>
+                    <span data-i18n="project2.b3">Integración de flujos RAG con LangChain y FastAPI en colaboración con Data Science, y apoyo al equipo Full Stack en el modelado de datos en PostgreSQL e integración con Azure.</span>
                   </li>
                 </ul>
                 <div class="flex flex-wrap gap-2">
                   <span class="tag px-2.5 py-1 rounded-md text-xs">Python</span>
-                  <span class="tag px-2.5 py-1 rounded-md text-xs">PySpark</span>
-                  <span class="tag px-2.5 py-1 rounded-md text-xs">Azure Data Factory</span>
-                  <span class="tag px-2.5 py-1 rounded-md text-xs">Data Lake</span>
-                  <span class="tag px-2.5 py-1 rounded-md text-xs">Synapse</span>
+                  <span class="tag px-2.5 py-1 rounded-md text-xs">PostgreSQL</span>
+                  <span class="tag px-2.5 py-1 rounded-md text-xs">pgvector</span>
+                  <span class="tag px-2.5 py-1 rounded-md text-xs">LangChain</span>
+                  <span class="tag px-2.5 py-1 rounded-md text-xs">FastAPI</span>
+                  <span class="tag px-2.5 py-1 rounded-md text-xs">Azure Synapse</span>
+                  <span class="tag px-2.5 py-1 rounded-md text-xs">RAG</span>
+                  <span class="tag px-2.5 py-1 rounded-md text-xs">Text-to-SQL</span>
                 </div>
               </div>
               <div class="project-visual rounded-2xl p-6 border theme-border">
                 <div class="flex items-center justify-between text-xs muted border-b theme-border pb-3 mb-5">
-                  <span><i class="fa-solid fa-diagram-project text-blue-500 mr-2" aria-hidden="true"></i><span data-i18n="project2.visual.title">Flujo de procesamiento</span></span>
-                  <span data-i18n="project2.visual.subtitle">Arquitectura de datos</span>
+                  <span><i class="fa-solid fa-brain text-rose-500 mr-2" aria-hidden="true"></i><span data-i18n="project2.visual.title">Flujo RAG y Text-to-SQL</span></span>
+                  <span data-i18n="project2.visual.subtitle">Búsqueda semántica y consulta analítica</span>
                 </div>
                 <div class="project-visual-inner rounded-xl p-4">
                   <div class="grid grid-cols-3 gap-2 text-center text-xs font-medium">
-                    <div class="chip-block p-3 rounded-lg" data-i18n-html="project2.diagram.source">Origen<br>CSV / BD</div>
-                    <div class="bg-blue-600/20 border border-blue-500/30 p-3 rounded-lg text-blue-500">ADF<br>Functions</div>
-                    <div class="chip-block p-3 rounded-lg">Data Lake<br>Parquet</div>
+                    <div class="chip-block p-3 rounded-lg" data-i18n-html="project2.diagram.source">Normativas<br>y contratos</div>
+                    <div class="bg-rose-600/20 border border-rose-500/30 p-3 rounded-lg text-rose-500">pgvector<br>LangChain</div>
+                    <div class="chip-block p-3 rounded-lg">Synapse<br>SQL</div>
                   </div>
-                  <p class="text-center text-xs muted mt-4" data-i18n="project2.diagram.flow">Ingesta → Bronze → Silver → Gold → Consumo analítico</p>
+                  <p class="text-center text-xs muted mt-4" data-i18n="project2.diagram.flow">Embeddings → pgvector → RAG / Text-to-SQL → Respuesta analítica</p>
                 </div>
               </div>
             </div>
@@ -354,18 +373,18 @@
           <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <article class="glass-card rounded-3xl p-8 space-y-4">
               <div class="flex items-center gap-3">
-                <div class="w-10 h-10 rounded-xl bg-cyan-600/15 text-cyan-500 flex items-center justify-center"><i class="fa-solid fa-bolt" aria-hidden="true"></i></div>
-                <span class="text-xs font-semibold uppercase tracking-wider muted" data-i18n="project3.kicker">Procesamiento y orquestación</span>
+                <div class="w-10 h-10 rounded-xl bg-blue-600/15 text-blue-500 flex items-center justify-center"><i class="fa-solid fa-database" aria-hidden="true"></i></div>
+                <span class="text-xs font-semibold uppercase tracking-wider muted" data-i18n="project3.kicker">Modernización de datos · Migración legacy</span>
               </div>
-              <h3 class="text-xl font-bold" data-i18n="project3.title">Motor de cálculo de facturación eléctrica</h3>
-              <p class="muted text-sm leading-relaxed" data-i18n="project3.desc">Modificación de los procesos de cálculo de facturación eléctrica con Azure Functions (Scala y Python) y orquestación mediante pipelines de Azure Data Factory, con validación de datos en Hive e Impala.</p>
+              <h3 class="text-xl font-bold" data-i18n="project3.title">Migración de gestión de existencias y caducidades</h3>
+              <p class="muted text-sm leading-relaxed" data-i18n="project3.desc">Migración de la lógica de negocio desde paquetes PL/SQL en Oracle hacia Azure, con rediseño e implementación en notebooks PySpark (Azure Synapse y Databricks) y persistencia de resultados en Azure Data Lake para su explotación analítica.</p>
               <div class="flex flex-wrap gap-2">
-                <span class="tag px-2.5 py-1 rounded-md text-xs">Azure Functions</span>
-                <span class="tag px-2.5 py-1 rounded-md text-xs">Scala</span>
-                <span class="tag px-2.5 py-1 rounded-md text-xs">Python</span>
-                <span class="tag px-2.5 py-1 rounded-md text-xs">Azure Data Factory</span>
-                <span class="tag px-2.5 py-1 rounded-md text-xs">Hive</span>
-                <span class="tag px-2.5 py-1 rounded-md text-xs">Impala</span>
+                <span class="tag px-2.5 py-1 rounded-md text-xs">PL/SQL</span>
+                <span class="tag px-2.5 py-1 rounded-md text-xs">Oracle</span>
+                <span class="tag px-2.5 py-1 rounded-md text-xs">PySpark</span>
+                <span class="tag px-2.5 py-1 rounded-md text-xs">Azure Synapse</span>
+                <span class="tag px-2.5 py-1 rounded-md text-xs">Databricks</span>
+                <span class="tag px-2.5 py-1 rounded-md text-xs">Azure Data Lake</span>
               </div>
             </article>
 
